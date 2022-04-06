@@ -11,9 +11,10 @@ const StyledMessage = styled.div`
   animation: ${opacity} 1s forwards;
 `
 
-export default function Message({ message }) {
+export default function Message(props) {
+  const {message} = props
   return (
-    <StyledMessage key={message} id="message">
+    <StyledMessage id="message">
       {message}
     </StyledMessage>
   )
